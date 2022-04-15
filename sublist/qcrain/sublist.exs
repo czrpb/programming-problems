@@ -12,7 +12,8 @@ defmodule Sublist do
   end
 end
 
-[l1, l2 | _] = System.argv()
+[l1, l2] = System.argv()
+|> Enum.take(2)
 |> Enum.map(&String.to_charlist/1)
 
 Sublist.sublist?(l1, l2)
