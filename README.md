@@ -31,4 +31,15 @@ Sub-directory: first_index_of_repeating_chars/README.md
 > > List 1: `[7,8,9]`, List 2: `[4,5,6,7,8,9,10,11,12]` -> `:sublist`
 
 ---
+## Wordle
+
+> Implement a solution for a wordle guess:
+> 
+> https://en.wikipedia.org/wiki/Wordle
+
+> Examples:
+> 
+> > Secret: `CARS`  GUESS: `CATS` -> `[:green, :green, :gray, :green]`
+
+---
 ## < NEXT PROBLEM >
