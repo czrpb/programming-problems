@@ -1,4 +1,4 @@
-defmodule NumberWordle do
+defmodule Wordle do
   def feedback(guess, answer) do
     # find matches and gather possibilities
     {guess, possibilities} = Enum.zip(guess, answer)
@@ -27,6 +27,13 @@ defmodule NumberWordle do
     Enum.reverse(result)
   end
 end
+
+defmodule Wordle2 do
+  def hint(guess, answer) do
+
+  end
+end
+
 
 [guess, answer] = System.argv
 
