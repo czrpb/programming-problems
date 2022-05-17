@@ -27,8 +27,8 @@ Hint per letter:
 
 `C`: Correct
 `A`: Correct
-`R`: Almost
 `S`: Almost
+`T`: Almost
 
 ### Guess: `SCAT`
 
