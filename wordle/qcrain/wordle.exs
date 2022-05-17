@@ -4,7 +4,7 @@ defmodule Wordle do
     {guess, possibilities} = Enum.zip(guess, answer)
     |> Enum.reduce({[], []}, fn
       {same, same}, {result, possibilities} ->
-        {[:green|result], possibilities}
+        {[:correct|result], possibilities}
       {guessed, possible}, {result, possibilities} ->
         {[guessed|result], [possible|possibilities]}
     end)
@@ -18,9 +18,9 @@ defmodule Wordle do
       item, {result, possibilities} -> cond do
         item in possibilities ->
           # dont forget to remove from future possibilities!!
-          {[:yellow|result], List.delete(possibilities, item)}
+          {[:almost|result], List.delete(possibilities, item)}
         true ->
-          {[:gray|result], possibilities}
+          {[:incorrect|result], possibilities}
       end
     end)
 
@@ -37,5 +37,5 @@ end
 
 [guess, answer] = System.argv
 
-NumberWordle.feedback(String.to_charlist(guess), String.to_charlist(answer))
+Wordle.feedback(String.to_charlist(guess), String.to_charlist(answer))
 |> IO.inspect
